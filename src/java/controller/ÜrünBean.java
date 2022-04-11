@@ -28,7 +28,7 @@ public class ÜrünBean implements Serializable {
     }
 
     public void create() {
-        this.getDao().create(getEntity());
+        this.getDao().create(entity);
         this.entity = new Ürün();
     }
 

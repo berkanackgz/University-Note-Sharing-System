@@ -17,17 +17,17 @@ import java.util.List;
  */
 public class ÜrünDAO extends DBConnection {
 
-    public void create(Ürün k) {
-
-        try {
+    
+       
+    public void create (Ürün k){
+        try{
             Statement st = this.connect().createStatement();
             String query = "insert into Ürün (ürün_id, üretici_id, içerik, onaylanma_durumu) values"
-                    + "('" + k.getÜrün_id() + "', '" + k.getÜretici_id() + "', '" + k.getIçerik() + "','"+k.isOnaylanma_durumu()+ "')";
-            st.executeUpdate(query);
-        } catch (Exception e) {
+                + "('" + k.getÜrün_id() + "', '" + k.getÜretici_id() + "', '" + k.getIçerik() + "','"+k.isOnaylanma_durumu()+ "')";
+        st.executeUpdate(query);
+        }catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     public void update(Ürün k) {
@@ -72,5 +72,4 @@ public class ÜrünDAO extends DBConnection {
         }
         return list;
     }
-
 }
