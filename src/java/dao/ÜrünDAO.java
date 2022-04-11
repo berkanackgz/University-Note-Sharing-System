@@ -4,6 +4,7 @@
  */
 package dao;
 
+import util.DBConnection;
 import entity.Ürün;
 import java.sql.Statement;
 import java.sql.ResultSet;

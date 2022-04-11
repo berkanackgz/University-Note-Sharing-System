@@ -21,6 +21,10 @@ public class Ürün {
         this.onaylanma_durumu = onaylanma_durumu;
     }
 
+    public Ürün() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public int getÜrün_id() {
         return ürün_id;
     }
