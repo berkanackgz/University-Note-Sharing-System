@@ -3,10 +3,47 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
+        <style>
+            body{
+                margin: 10px;
+                padding: 0px;
+                background-color:gainsboro;
+               
+            }  
+            #conteiner{
+                float:left;
+                width:100vw;
+                height:100vw;
+                border: 5px;
+                border-style: solid;
+                border-color: black;
+            }
+            #lesson{
+                float: left;
+                width: 20vw;
+                height: 60vw;
+                background:darkgray;
+                border-bottom: 0px;
+                border-top: 0px;
+                border-left: 0px;
+                border-right: 5px;
+                border-style: solid;
+                border-color: black;
+            }
+            #conteiner{
+                float: left;
+                width: 90vw;
+                height: 60vw;
+                background:darkkhaki;
+            }
+        </style>
         <title>Üniversite Not Paylaşım</title>
     </h:head>
     <h:body>
-        Hello x!
+        <div id="conteiner">
+            <div id="lesson"></div>
+            <div id="content"></div>
+        </div>
     </h:body>
 </html>
 
