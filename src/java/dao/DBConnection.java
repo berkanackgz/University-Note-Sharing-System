@@ -11,6 +11,10 @@ import java.sql.DriverManager;
  *
  * @author berka
  */
+//BERKAN AÇIKGÖZ
+//MUHAMMET AKKAN
+//BERZA BOZKURT
+//METİN KÖROĞLU
 public class DBConnection {
         
     public Connection connect(){
