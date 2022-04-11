@@ -8,27 +8,31 @@ package entity;
  *
  * @author CASPER
  */
-public class Dersler {
-    private int ders_id;
+public class Kullanıcı_Rolü {
+    private int kullanıcı_id;
     String isim;
     String soyisim;
+    String öğrenci_no;
     String bölüm;
     String fakülte;
+    String alım_geçmişi;
 
-    public Dersler(int ders_id, String isim, String soyisim, String bölüm, String fakülte) {
-        this.ders_id = ders_id;
+    public Kullanıcı_Rolü(int kullanıcı_id, String isim, String soyisim, String öğrenci_no, String bölüm, String fakülte, String alım_geçmişi) {
+        this.kullanıcı_id = kullanıcı_id;
         this.isim = isim;
         this.soyisim = soyisim;
+        this.öğrenci_no = öğrenci_no;
         this.bölüm = bölüm;
         this.fakülte = fakülte;
+        this.alım_geçmişi = alım_geçmişi;
     }
 
-    public int getDers_id() {
-        return ders_id;
+    public int getKullanıcı_id() {
+        return kullanıcı_id;
     }
 
-    public void setDers_id(int ders_id) {
-        this.ders_id = ders_id;
+    public void setKullanıcı_id(int kullanıcı_id) {
+        this.kullanıcı_id = kullanıcı_id;
     }
 
     public String getIsim() {
@@ -47,6 +51,14 @@ public class Dersler {
         this.soyisim = soyisim;
     }
 
+    public String getÖğrenci_no() {
+        return öğrenci_no;
+    }
+
+    public void setÖğrenci_no(String öğrenci_no) {
+        this.öğrenci_no = öğrenci_no;
+    }
+
     public String getBölüm() {
         return bölüm;
     }
@@ -61,6 +73,14 @@ public class Dersler {
 
     public void setFakülte(String fakülte) {
         this.fakülte = fakülte;
+    }
+
+    public String getAlım_geçmişi() {
+        return alım_geçmişi;
+    }
+
+    public void setAlım_geçmişi(String alım_geçmişi) {
+        this.alım_geçmişi = alım_geçmişi;
     }
     
 }
