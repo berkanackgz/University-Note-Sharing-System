@@ -8,7 +8,7 @@ package entity;
  *
  * @author CASPER
  */
-public class Kullanıcı_Rolü {
+public class Kullanıcı_Role {
     /*
     Güncellendi 25.05.22==CTOR ve Get-Set güncellemeleri
     */
@@ -20,7 +20,7 @@ public class Kullanıcı_Rolü {
     private String User_Faculty;
     private String User_Section;
 
-    public Kullanıcı_Rolü(int UserId, String UserName, String UserLastName, String UserMail, String StudentNumber, String User_Faculty, String User_Section) {
+    public Kullanıcı_Role(int UserId, String UserName, String UserLastName, String UserMail, String StudentNumber, String User_Faculty, String User_Section) {
         this.UserId = UserId;
         this.UserName = UserName;
         this.UserLastName = UserLastName;
