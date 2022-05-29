@@ -5,7 +5,7 @@
 package dao;
 
 import util.DBConnection;
-import entity.Ürün;
+import entity.Product;
 import java.sql.Statement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ public class ÜrünDAO extends DBConnection {
 
     
        
-    public void create (Ürün k){
+    public void create (Product k){
         try{
             Statement st = this.connect().createStatement();
             String query = "insert into Ürün (ürün_id, üretici_id, içerik, onaylanma_durumu) values"
@@ -30,7 +30,7 @@ public class ÜrünDAO extends DBConnection {
         }
     }
 
-    public void update(Ürün k) {
+    public void update(Product k) {
 
         try {
             Statement st = this.connect().createStatement();
@@ -43,7 +43,7 @@ public class ÜrünDAO extends DBConnection {
 
     }
 
-    public void delete(Ürün k) {
+    public void delete(Product k) {
 
         try {
             Statement st = this.connect().createStatement();
@@ -55,8 +55,8 @@ public class ÜrünDAO extends DBConnection {
 
     }
 
-    public List<Ürün> getList() {
-        List<Ürün> list = new ArrayList<>();
+    public List<Product> getList() {
+        List<Product> list = new ArrayList<>();
         try {
             Statement st = this.connect().createStatement();
             String query = "select * from Ürün order by ürün_id asc";
@@ -64,7 +64,7 @@ public class ÜrünDAO extends DBConnection {
             ResultSet rs = st.executeQuery(query);
 
             while (rs.next()) {
-                list.add(new Ürün(rs.getInt("ürün_id"), rs.getInt("üretici_id"), rs.getString("içerik"), rs.getBoolean("onaylanma_durumu")));
+                list.add(new Product(rs.getInt("ürün_id"), rs.getInt("üretici_id"), rs.getString("içerik"), rs.getBoolean("onaylanma_durumu")));
             }
 
         } catch (Exception e) {

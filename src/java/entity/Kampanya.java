@@ -11,48 +11,63 @@ import java.util.Date;
  * @author CASPER
  */
 public class Kampanya {
-    private int kampanya_id;
-    float kampanya_yüzdesi;
-    Date başlangıç_tarihi;
-    Date bitiş_tarihi;
+    /*
+    Güncellendi=25.05.22
+    *Get set düzenlemeleri yapıldı.
+    */
+    private int KampanyaId;
+    private String KampanyaName;
+    private Date KampanyaStartDate;
+    private Date KampanyaFinishDate;
+    private double KampanyaIndirimYuzdesi;
 
-    public Kampanya(int kampanya_id, float kampanya_yüzdesi, Date başlangıç_tarihi, Date bitiş_tarihi) {
-        this.kampanya_id = kampanya_id;
-        this.kampanya_yüzdesi = kampanya_yüzdesi;
-        this.başlangıç_tarihi = başlangıç_tarihi;
-        this.bitiş_tarihi = bitiş_tarihi;
+    public Kampanya(int KampanyaId, String KampanyaName, Date KampanyaStartDate, Date KampanyaFinishDate, double KampanyaIndirimYuzdesi) {
+        this.KampanyaId = KampanyaId;
+        this.KampanyaName = KampanyaName;
+        this.KampanyaStartDate = KampanyaStartDate;
+        this.KampanyaFinishDate = KampanyaFinishDate;
+        this.KampanyaIndirimYuzdesi = KampanyaIndirimYuzdesi;
     }
 
-    public int getKampanya_id() {
-        return kampanya_id;
+    public int getKampanyaId() {
+        return KampanyaId;
     }
 
-    public void setKampanya_id(int kampanya_id) {
-        this.kampanya_id = kampanya_id;
+    public void setKampanyaId(int KampanyaId) {
+        this.KampanyaId = KampanyaId;
     }
 
-    public float getKampanya_yüzdesi() {
-        return kampanya_yüzdesi;
+    public String getKampanyaName() {
+        return KampanyaName;
     }
 
-    public void setKampanya_yüzdesi(float kampanya_yüzdesi) {
-        this.kampanya_yüzdesi = kampanya_yüzdesi;
+    public void setKampanyaName(String KampanyaName) {
+        this.KampanyaName = KampanyaName;
     }
 
-    public Date getBaşlangıç_tarihi() {
-        return başlangıç_tarihi;
+    public Date getKampanyaStartDate() {
+        return KampanyaStartDate;
     }
 
-    public void setBaşlangıç_tarihi(Date başlangıç_tarihi) {
-        this.başlangıç_tarihi = başlangıç_tarihi;
+    public void setKampanyaStartDate(Date KampanyaStartDate) {
+        this.KampanyaStartDate = KampanyaStartDate;
     }
 
-    public Date getBitiş_tarihi() {
-        return bitiş_tarihi;
+    public Date getKampanyaFinishDate() {
+        return KampanyaFinishDate;
     }
 
-    public void setBitiş_tarihi(Date bitiş_tarihi) {
-        this.bitiş_tarihi = bitiş_tarihi;
+    public void setKampanyaFinishDate(Date KampanyaFinishDate) {
+        this.KampanyaFinishDate = KampanyaFinishDate;
     }
+
+    public double getKampanyaIndirimYuzdesi() {
+        return KampanyaIndirimYuzdesi;
+    }
+
+    public void setKampanyaIndirimYuzdesi(double KampanyaIndirimYuzdesi) {
+        this.KampanyaIndirimYuzdesi = KampanyaIndirimYuzdesi;
+    }
+    
     
 }

@@ -9,78 +9,82 @@ package entity;
  * @author CASPER
  */
 public class Kullanıcı_Rolü {
-    private int kullanıcı_id;
-    String isim;
-    String soyisim;
-    String öğrenci_no;
-    String bölüm;
-    String fakülte;
-    String alım_geçmişi;
+    /*
+    Güncellendi 25.05.22==CTOR ve Get-Set güncellemeleri
+    */
+    private int UserId;
+    private String UserName;
+    private String UserLastName;
+    private String UserMail;
+    private String StudentNumber;
+    private String User_Faculty;
+    private String User_Section;
 
-    public Kullanıcı_Rolü(int kullanıcı_id, String isim, String soyisim, String öğrenci_no, String bölüm, String fakülte, String alım_geçmişi) {
-        this.kullanıcı_id = kullanıcı_id;
-        this.isim = isim;
-        this.soyisim = soyisim;
-        this.öğrenci_no = öğrenci_no;
-        this.bölüm = bölüm;
-        this.fakülte = fakülte;
-        this.alım_geçmişi = alım_geçmişi;
+    public Kullanıcı_Rolü(int UserId, String UserName, String UserLastName, String UserMail, String StudentNumber, String User_Faculty, String User_Section) {
+        this.UserId = UserId;
+        this.UserName = UserName;
+        this.UserLastName = UserLastName;
+        this.UserMail = UserMail;
+        this.StudentNumber = StudentNumber;
+        this.User_Faculty = User_Faculty;
+        this.User_Section = User_Section;
     }
 
-    public int getKullanıcı_id() {
-        return kullanıcı_id;
+    public int getUserId() {
+        return UserId;
     }
 
-    public void setKullanıcı_id(int kullanıcı_id) {
-        this.kullanıcı_id = kullanıcı_id;
+    public void setUserId(int UserId) {
+        this.UserId = UserId;
     }
 
-    public String getIsim() {
-        return isim;
+    public String getUserName() {
+        return UserName;
     }
 
-    public void setIsim(String isim) {
-        this.isim = isim;
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
     }
 
-    public String getSoyisim() {
-        return soyisim;
+    public String getUserLastName() {
+        return UserLastName;
     }
 
-    public void setSoyisim(String soyisim) {
-        this.soyisim = soyisim;
+    public void setUserLastName(String UserLastName) {
+        this.UserLastName = UserLastName;
     }
 
-    public String getÖğrenci_no() {
-        return öğrenci_no;
+    public String getUserMail() {
+        return UserMail;
     }
 
-    public void setÖğrenci_no(String öğrenci_no) {
-        this.öğrenci_no = öğrenci_no;
+    public void setUserMail(String UserMail) {
+        this.UserMail = UserMail;
     }
 
-    public String getBölüm() {
-        return bölüm;
+    public String getStudentNumber() {
+        return StudentNumber;
     }
 
-    public void setBölüm(String bölüm) {
-        this.bölüm = bölüm;
+    public void setStudentNumber(String StudentNumber) {
+        this.StudentNumber = StudentNumber;
     }
 
-    public String getFakülte() {
-        return fakülte;
+    public String getUser_Faculty() {
+        return User_Faculty;
     }
 
-    public void setFakülte(String fakülte) {
-        this.fakülte = fakülte;
+    public void setUser_Faculty(String User_Faculty) {
+        this.User_Faculty = User_Faculty;
     }
 
-    public String getAlım_geçmişi() {
-        return alım_geçmişi;
+    public String getUser_Section() {
+        return User_Section;
     }
 
-    public void setAlım_geçmişi(String alım_geçmişi) {
-        this.alım_geçmişi = alım_geçmişi;
+    public void setUser_Section(String User_Section) {
+        this.User_Section = User_Section;
     }
+    
     
 }

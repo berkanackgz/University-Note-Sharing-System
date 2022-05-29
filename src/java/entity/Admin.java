@@ -9,58 +9,59 @@ package entity;
  * @author CASPER
  */
 public class Admin {
-    private int admin_id;
-    String isim;
-    String soyisim;
-    String mail;
-    String telefon_no;
+    private int AdminId;
+    private String AdminName;
+    private String AdminLastName;
+    private String AdminMail;
+    private String AdminPhoneNumber;
 
-    public Admin(int admin_id, String isim, String soyisim, String mail, String telefon_no) {
-        this.admin_id = admin_id;
-        this.isim = isim;
-        this.soyisim = soyisim;
-        this.mail = mail;
-        this.telefon_no = telefon_no;
+    public Admin(int AdminId, String AdminName, String AdminLastName, String AdminMail, String AdminPhoneNumber) {
+        this.AdminId = AdminId;
+        this.AdminName = AdminName;
+        this.AdminLastName = AdminLastName;
+        this.AdminMail = AdminMail;
+        this.AdminPhoneNumber = AdminPhoneNumber;
     }
 
-    public int getAdmin_id() {
-        return admin_id;
+    public int getAdminId() {
+        return AdminId;
     }
 
-    public void setAdmin_id(int admin_id) {
-        this.admin_id = admin_id;
+    public void setAdminId(int AdminId) {
+        this.AdminId = AdminId;
     }
 
-    public String getIsim() {
-        return isim;
+    public String getAdminName() {
+        return AdminName;
     }
 
-    public void setIsim(String isim) {
-        this.isim = isim;
+    public void setAdminName(String AdminName) {
+        this.AdminName = AdminName;
     }
 
-    public String getSoyisim() {
-        return soyisim;
+    public String getAdminLastName() {
+        return AdminLastName;
     }
 
-    public void setSoyisim(String soyisim) {
-        this.soyisim = soyisim;
+    public void setAdminLastName(String AdminLastName) {
+        this.AdminLastName = AdminLastName;
     }
 
-    public String getMail() {
-        return mail;
+    public String getAdminMail() {
+        return AdminMail;
     }
 
-    public void setMail(String mail) {
-        this.mail = mail;
+    public void setAdminMail(String AdminMail) {
+        this.AdminMail = AdminMail;
     }
 
-    public String getTelefon_no() {
-        return telefon_no;
+    public String getAdminPhoneNumber() {
+        return AdminPhoneNumber;
     }
 
-    public void setTelefon_no(String telefon_no) {
-        this.telefon_no = telefon_no;
+    public void setAdminPhoneNumber(String AdminPhoneNumber) {
+        this.AdminPhoneNumber = AdminPhoneNumber;
     }
+    
     
 }

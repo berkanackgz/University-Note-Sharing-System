@@ -4,7 +4,7 @@
  */
 package Test;
 import dao.ÜrünDAO;
-import entity.Ürün;
+import entity.Product;
 import controller.ÜrünBean;
 /**
  *

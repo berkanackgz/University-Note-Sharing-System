@@ -5,7 +5,7 @@
 package controller;
 
 import dao.ÜrünDAO;
-import entity.Ürün;
+import entity.Product;
 import jakarta.inject.Named;
 import jakarta.enterprise.context.SessionScoped;
 import java.io.Serializable;
@@ -20,8 +20,8 @@ import java.util.List;
 public class ÜrünBean implements Serializable {
 
     private ÜrünDAO dao;
-    private List<Ürün> list;
-    private Ürün entity;
+    private List<Product> list;
+    private Product entity;
 
     public ÜrünBean() {
 
@@ -29,17 +29,17 @@ public class ÜrünBean implements Serializable {
 
     public void create() {
         this.getDao().create(entity);
-        this.entity = new Ürün();
+        this.entity = new Product();
     }
 
     public void update() {
         this.getDao().update(getEntity());
-        this.entity = new Ürün();
+        this.entity = new Product();
     }
 
-    public void delete(Ürün entity) {
+    public void delete(Product entity) {
         this.getDao().delete(entity);
-        this.entity = new Ürün();
+        this.entity = new Product();
     }
 
     public ÜrünDAO getDao() {
@@ -53,23 +53,23 @@ public class ÜrünBean implements Serializable {
         this.dao = dao;
     }
 
-    public List<Ürün> getList() {
+    public List<Product> getList() {
         list = getDao().getList();
         return list;
     }
 
-    public void setList(List<Ürün> list) {
+    public void setList(List<Product> list) {
         this.list = list;
     }
 
-    public Ürün getEntity() {
+    public Product getEntity() {
         if (this.entity == null) {
-            this.entity = new Ürün();
+            this.entity = new Product();
         }
         return entity;
     }
 
-    public void setEntity(Ürün entity) {
+    public void setEntity(Product entity) {
         this.entity = entity;
     }
 
