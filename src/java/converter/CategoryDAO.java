@@ -4,10 +4,17 @@
  */
 package converter;
 
+import entity.Category;
+import java.util.List;
+
 /**
  *
  * @author CASPER
  */
 public class CategoryDAO {
+
+    public List<Category> readList() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }
