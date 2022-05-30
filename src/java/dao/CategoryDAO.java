@@ -4,9 +4,13 @@
  */
 package dao;
 
-import jakarta.jms.Connection;
+import entity.Category;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 import util.DBConnection;
+
 
 /**
  *
@@ -14,8 +18,18 @@ import util.DBConnection;
  */
 public class CategoryDAO extends DBConnection{
     
-    private List<CategoryDAO> readList(){
-        List<Category>
+    private List<Category> readList(){
+        List<Category> list = new ArrayList<>();
+        try {
+            Statement st=this.getConnect().createStatement();
+            ResultSet rs=st.executeQuery("select*from Category");
+            while(rs.next()){
+                
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return list;
     }
     
     
