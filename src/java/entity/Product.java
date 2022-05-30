@@ -14,13 +14,14 @@ Güncellendi 25.05.22
     Get set güncellemeleri yapıldı.
 */
    private int ProductId;
+   private int ProducerId;
    private boolean onaylanma_durumu;
 
-    public Product(int ProductId, boolean onaylanma_durumu) {
+    public Product(int ProductId, int ProducerId, boolean onaylanma_durumu) {
         this.ProductId = ProductId;
+        this.ProducerId = ProducerId;
         this.onaylanma_durumu = onaylanma_durumu;
     }
-
 
     public int getProductId() {
         return ProductId;
@@ -30,6 +31,14 @@ Güncellendi 25.05.22
         this.ProductId = ProductId;
     }
 
+    public int getProducerId() {
+        return ProducerId;
+    }
+
+    public void setProducerId(int ProducerId) {
+        this.ProducerId = ProducerId;
+    }
+
     public boolean isOnaylanma_durumu() {
         return onaylanma_durumu;
     }
@@ -37,6 +46,8 @@ Güncellendi 25.05.22
     public void setOnaylanma_durumu(boolean onaylanma_durumu) {
         this.onaylanma_durumu = onaylanma_durumu;
     }
+
+    
    
     
 }
