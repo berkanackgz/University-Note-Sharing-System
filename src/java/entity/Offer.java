@@ -10,7 +10,7 @@ import java.util.Date;
  *
  * @author CASPER
  */
-public class Kampanya {
+public class Offer {
     /*
     Güncellendi=25.05.22
     *Get set düzenlemeleri yapıldı.
@@ -21,7 +21,7 @@ public class Kampanya {
     private Date KampanyaFinishDate;
     private double KampanyaIndirimYuzdesi;
 
-    public Kampanya(int KampanyaId, String KampanyaName, Date KampanyaStartDate, Date KampanyaFinishDate, double KampanyaIndirimYuzdesi) {
+    public Offer(int KampanyaId, String KampanyaName, Date KampanyaStartDate, Date KampanyaFinishDate, double KampanyaIndirimYuzdesi) {
         this.KampanyaId = KampanyaId;
         this.KampanyaName = KampanyaName;
         this.KampanyaStartDate = KampanyaStartDate;
