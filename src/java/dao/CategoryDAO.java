@@ -5,13 +5,18 @@
 package dao;
 
 import jakarta.jms.Connection;
+import java.util.List;
+import util.DBConnection;
 
 /**
  *
  * @author CASPER
  */
-public class CategoryDAO {
-    private Connection db;
+public class CategoryDAO extends DBConnection{
+    
+    private List<CategoryDAO> readList(){
+        List<Category>
+    }
     
     
     

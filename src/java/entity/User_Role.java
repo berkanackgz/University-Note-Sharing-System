@@ -4,11 +4,13 @@
  */
 package entity;
 
+import java.io.Serializable;
+
 /**
  *
  * @author CASPER
  */
-public class User_Role {
+public class User_Role implements Serializable{
     /*
     Güncellendi 25.05.22==CTOR ve Get-Set güncellemeleri
     */
