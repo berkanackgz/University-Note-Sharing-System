@@ -9,8 +9,13 @@
                 padding: 0px;
                 background-color:gainsboro;
                
-            }  
-            #conteiner{
+            }
+            #right-side{
+                float: right;
+                width: 77%;
+                height: 100%;
+            }
+            #container{
                 float:left;
                 width:100vw;
                 height:100vw;
@@ -77,6 +82,15 @@
                 padding: 10px;
                 border-radius: 20px;
             }
+            #ders-yukle{
+                text-align: center;
+            }
+            #ders-sec
+            {
+                margin-top: 100px;
+                text-align: center;
+                
+            }
         </style>
         <title>Üniversite Not Paylaşım</title>
     </h:head>
@@ -89,6 +103,23 @@
                     <li> <a href="panel/siber.xhtml">Siber Güvenlik</a></li>
                     <li> <a href="panel/programlama.xhtml">Programlama Dilleri</a></li>
                 </ol>
+            </div>
+            <div id="right-side">
+                <h1 id="ders-yukle">Ders Yükleme Alanı</h1>
+                
+                <div id="ders-sec">
+                <p style="font-weight:bold;">Ders Seçiniz</p>
+                <select name="Dersadi">
+                    <option>Internet Programciligi</option>
+                    <option>Siber Guvenlik</option>
+                    <option>Programlama Dilleri</option>
+                </select>
+                <p style="font-weight:bold;">Not Dosyası Seçiniz</p>
+                <input type="file" name="Notsecim" width="50" style="margin-left:50px;" />
+                <p style="font-weight:bold;">Not Açıklaması Giriniz</p>
+                <textarea id="notaciklama0" name="notaciklama" rows="4" cols="50"></textarea>
+                </div>
+                
             </div>
             <div id="content"></div>
         </div>

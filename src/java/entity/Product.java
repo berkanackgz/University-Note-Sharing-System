@@ -21,6 +21,7 @@ Güncellendi 25.05.22
         this.onaylanma_durumu = onaylanma_durumu;
     }
 
+
     public int getProductId() {
         return ProductId;
     }

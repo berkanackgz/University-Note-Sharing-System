@@ -29,7 +29,7 @@ public class ÜrünBean implements Serializable {
 
     public void create() {
         this.getDao().create(entity);
-        this.entity = new Product();
+        this.entity= new Product();
     }
 
     public void update() {
