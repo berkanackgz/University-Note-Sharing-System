@@ -14,17 +14,12 @@ public class Producer_Role { //Güncellendi 25.05.22
     private int ProducerId;
     private String ProducerName;
     private String ProducerLastName;
-    private String StudentNumber;
-    private String ProducerFaculty;
-    private String ProducerSection;
+    
 
-    public Producer_Role(int ProducerId, String ProducerName, String ProducerLastName, String StudentNumber, String ProducerFaculty, String ProducerSection) {
+    public Producer_Role(int ProducerId, String ProducerName, String ProducerLastName) {
         this.ProducerId = ProducerId;
         this.ProducerName = ProducerName;
         this.ProducerLastName = ProducerLastName;
-        this.StudentNumber = StudentNumber;
-        this.ProducerFaculty = ProducerFaculty;
-        this.ProducerSection = ProducerSection;
     }
 
     public int getProducerId() {
@@ -49,30 +44,6 @@ public class Producer_Role { //Güncellendi 25.05.22
 
     public void setProducerLastName(String ProducerLastName) {
         this.ProducerLastName = ProducerLastName;
-    }
-
-    public String getStudentNumber() {
-        return StudentNumber;
-    }
-
-    public void setStudentNumber(String StudentNumber) {
-        this.StudentNumber = StudentNumber;
-    }
-
-    public String getProducerFaculty() {
-        return ProducerFaculty;
-    }
-
-    public void setProducerFaculty(String ProducerFaculty) {
-        this.ProducerFaculty = ProducerFaculty;
-    }
-
-    public String getProducerSection() {
-        return ProducerSection;
-    }
-
-    public void setProducerSection(String ProducerSection) {
-        this.ProducerSection = ProducerSection;
     }
     
     
