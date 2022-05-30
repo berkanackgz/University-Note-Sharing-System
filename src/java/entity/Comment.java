@@ -14,15 +14,15 @@ public class Comment {
     private int CommentId;
     private int ProductId;
     private String Comment;
-    private boolean CommentOnaylama;
+    private boolean CommentConfirm;
     private Date CommentDate;
     private Date CommentUpdateDate;
 
-    public Comment(int CommentId, int ProductId, String Comment, boolean CommentOnaylama, Date CommentDate, Date CommentUpdateDate) {
+    public Comment(int CommentId, int ProductId, String Comment, boolean CommentConfirm, Date CommentDate, Date CommentUpdateDate) {
         this.CommentId = CommentId;
         this.ProductId = ProductId;
         this.Comment = Comment;
-        this.CommentOnaylama = CommentOnaylama;
+        this.CommentConfirm = CommentConfirm;
         this.CommentDate = CommentDate;
         this.CommentUpdateDate = CommentUpdateDate;
     }
@@ -52,11 +52,11 @@ public class Comment {
     }
 
     public boolean isCommentOnaylama() {
-        return CommentOnaylama;
+        return CommentConfirm;
     }
 
-    public void setCommentOnaylama(boolean CommentOnaylama) {
-        this.CommentOnaylama = CommentOnaylama;
+    public void setCommentOnaylama(boolean CommentConfirm) {
+        this.CommentConfirm = CommentConfirm;
     }
 
     public Date getCommentDate() {

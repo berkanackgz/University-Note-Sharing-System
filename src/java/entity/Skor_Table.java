@@ -19,18 +19,16 @@ public class Skor_Table {
     private int ProducerId;
     private String ProducerName;
     private String ProducerLastName;
-    private String ProducerFaculty;
-    private String ProducerSection;
+    
 
-    public Skor_Table(int ProductId, String LessonName, String LessonSection, int ProducerId, String ProducerName, String ProducerLastName, String ProducerFaculty, String ProducerSection) {
+    public Skor_Table(int ProductId, String LessonName, String LessonSection, int ProducerId, String ProducerName, String ProducerLastName) {
         this.ProductId = ProductId;
         this.LessonName = LessonName;
         this.LessonSection = LessonSection;
         this.ProducerId = ProducerId;
         this.ProducerName = ProducerName;
         this.ProducerLastName = ProducerLastName;
-        this.ProducerFaculty = ProducerFaculty;
-        this.ProducerSection = ProducerSection;
+        
     }
 
     public int getProductId() {
@@ -81,21 +79,7 @@ public class Skor_Table {
         this.ProducerLastName = ProducerLastName;
     }
 
-    public String getProducerFaculty() {
-        return ProducerFaculty;
-    }
-
-    public void setProducerFaculty(String ProducerFaculty) {
-        this.ProducerFaculty = ProducerFaculty;
-    }
-
-    public String getProducerSection() {
-        return ProducerSection;
-    }
-
-    public void setProducerSection(String ProducerSection) {
-        this.ProducerSection = ProducerSection;
-    }
+    
     
     
     
