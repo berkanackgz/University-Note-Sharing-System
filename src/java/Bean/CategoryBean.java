@@ -10,7 +10,6 @@ import jakarta.enterprise.context.SessionScoped;
 import jakarta.inject.Named;
 import java.io.Serializable;
 import java.util.List;
-import entity.Category;
 
 /**
  *
