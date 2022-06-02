@@ -4,18 +4,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
 -->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <h:outputStylesheet library="css" name="bootstrap.min.cc"/>
         <title>İnternet Programcılığı</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <style>
+        <style>
             body{
                 margin: 10px;
                 padding: 0px;
                 background-color:gainsboro;
-               
-            }  
+
+            }
             #conteiner{
                 float:left;
                 width:100vw;
@@ -47,13 +49,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
                 font-size: 40px;
                 color:dodgerblue;
                 text-align: center;
-                
+
             }
-             li{
+            li{
                 font-family: arial;
                 font-size: 20px;
                 color:dodgerblue;
-                margin: 25px;                
+                margin: 25px;
             }
             li a{
                 text-decoration: none;
@@ -64,7 +66,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
             li a:hover{
                 text-decoration: none;
                 background:window;
-                
+
             }
             h1 a{
                 font-family: arial;
@@ -85,13 +87,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
             }
             #ipveri{
                 margin-left: 250px;
-                margin-top: 100px; 
+                margin-top: 100px;
                 font-family: arial;
                 font-size: 20px;
             }
             #ipveri tr th{
                 text-decoration: none;
-                
+
             }
             #content{
                 float: right;
@@ -100,8 +102,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
                 text-align: center;
             }
         </style>
-    </head>
-    <body>
+    </h:head>
+    <h:body>
         <div id="container">
             <div id="lesson">
                 <h1 id="dersler"> <a href="../index.xhtml">Dersler</a></h1>
@@ -112,85 +114,41 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
                 </ol>
             </div>
             <div id="content">
-                <table border="3" width="100" cellpadding="5" id="ipveri">
-                    <thead>
-                        <tr>
-                            <th>DERS ADI</th>
-                            <th>NOT</th>
-                            <th>AÇIKLAMA</th>
-                            <th>DOSYA BOYUTU</th>   
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            
-                        </tr>
-                        <tr> 
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            
-                        </tr>
-                        <tr> 
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            
-                        </tr>
-                        <tr> 
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            
-                        </tr>
-                        <tr> 
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            
-                        </tr>
-                        <tr> 
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            
-                        </tr>
-                        <tr> 
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            
-                        </tr>
-                        <tr> 
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            
-                        </tr>
-                        <tr> 
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            
-                        </tr>
-                       
-                        <!-- comment -->
-                    </tbody>
-                </table>
+                <h:form>
+                    <table border="3" width="100" cellpadding="5" id="ipveri">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NOT LİNK</th>
+                                <th>AÇIKLAMA</th>
+                                <th>TARİH</th>   
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <ui:repeat value="#{InternetBean.list}" var="e">
+                                <tr>
+                                    <td>#{e.id}</td>
+                                    <td>#{e.id}</td>
+                                    <td>#{e.id}</td>
+                                    <td>#{e.id}</td>
+                                </tr>
+                            </ui:repeat>
+                        </tbody>
+                    </table>
+                </h:form>
+                <div>
+                    <h:form>
 
+                        <label>Not Link</label>
+                        <h:inputText value="#{InternetBean.entity.ilink}"/>
+
+                        <h:commandButton   action="#{InternetBean.create}" value="Create"/>
+                        <h:commandButton  rendered="#{InternetBean.entity.id!=null}" action="#{InternetBean.create}" value="Update"/>
+                        <h:commandButton  rendered="#{InternetBean.entity.id!=null}" action="#{InternetBean.create}" value="Delete"/>
+
+                    </h:form>
+                </div>
             </div>
         </div>
-    </body>
+    </h:body>
 </html>

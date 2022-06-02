@@ -17,19 +17,19 @@ import java.sql.DriverManager;
 //METİN KÖROĞLU
 public abstract class DBConnection {
 
-    private Connection connection;
+    private Connection connect;
 
     public Connection getConnect() {
-        if (this.connection == null) {
-            try {
+        if(this.connect==null){
+            try{
                 Class.forName("org.postgresql.Driver");
-                this.connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/WebAplication", "postgres", "12345");
-
-            } catch (Exception e) {
+                this.connect=DriverManager.getConnection("jdbc:postgresql://localhost:5432/university", "postgres", "147369");
+            }
+            catch( Exception e)
+            {
                 System.out.println(e.getMessage());
             }
         }
-        return connection;
-    }
-
+        return connect;
+    } 
 }

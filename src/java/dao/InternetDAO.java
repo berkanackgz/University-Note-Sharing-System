@@ -4,7 +4,7 @@
  */
 package dao;
 
-import entity.Category;
+import entity.Internet;
 import java.sql.Statement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -13,17 +13,19 @@ import util.DBConnection;
 
 /**
  *
- * @author CASPER
+ * @author berka
  */
-public class CategoryDAO extends DBConnection {
+public class InternetDAO extends DBConnection {
 
-    public List<Category> readList() {
-        List<Category> list = new ArrayList<>();
+    public List<Internet> readList() {
+        List<Internet> list = new ArrayList<>();
+
         try {
             Statement st = this.getConnect().createStatement();
-            ResultSet rs = st.executeQuery("select*from Category");
+            ResultSet rs = st.executeQuery("select * from internet");
+
             while (rs.next()) {
-                list.add(new Category(rs.getLong("id"), rs.getString("title"), rs.getDate("created"), rs.getDate("Update")));
+                list.add(new Internet(rs.getLong("id"), rs.getString("ilink"), rs.getString("idescription"), rs.getDate("icreatedate")));
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -31,31 +33,28 @@ public class CategoryDAO extends DBConnection {
         return list;
     }
 
-    public void Create(Category c) {
+    public void create(Internet i) {
         try {
             Statement st = this.getConnect().createStatement();
-            st.execute("insert into category(title) values ('" + c.getTitle() + "where id=" + c.getCategoryId());
+            st.executeUpdate("insert into internet(ilink,idescription) values ('"+i.getIlink()+"','"+i.getIdescription()+"')");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
-
-    public void Update(Category c) {
+    public void update(Internet i) {
         try {
             Statement st = this.getConnect().createStatement();
-            st.execute("select*from category");
+            st.executeUpdate("update internet set title='"+i.getIlink()+"' where id="+i.getId());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
-
-    public void Delete(Category c) {
+    public void delete(Internet i) {
         try {
             Statement st = this.getConnect().createStatement();
-            st.execute("delete from category where id=" + c.getCategoryId());
+            st.executeUpdate("delete from internet where id="+i.getId());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
-
 }
